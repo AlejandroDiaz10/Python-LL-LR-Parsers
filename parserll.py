@@ -138,7 +138,13 @@ class Grammar3(GrammarLL):
         super().__init__("table_ll_3.csv")
 
 
+class GrammarHW(GrammarLL):
+    def __init__(self):
+        super().__init__("table_hw_ll.csv")
+
+
 if __name__ == "__main__":
-    # Grammar1().parse("(((a+a)+a)+a)")
-    # Grammar2().parse("(())()")
+    Grammar1().parse("(((a+a)+a)+a)")
+    Grammar2().parse("(())()")
     Grammar3().parse("i+i*i")
+    GrammarHW().parse("i(0)i(1)oeo")
